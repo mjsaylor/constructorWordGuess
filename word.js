@@ -14,7 +14,7 @@ class Word {
     toString() {
         //This should call the function on each letter object(the first funciton defined in Letter.js)
         //that displays the character or underscore and concatenate those together
-        this.letters.map(letter => letter.toString()).join('')
+        return this.letters.map(letter => letter.toString()).join('')
     }
 
     guessLetters(guess) {

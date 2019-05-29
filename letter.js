@@ -44,19 +44,19 @@ class Letter {
     }
 }
 
-const l = new Letter("l");
-console.log(`Our new letter is ${l}`)
+// const l = new Letter("l");
+// console.log(`Our new letter is ${l}`)
 
-console.log("I'm going to make a guess that this letter is 'p'.")
-let isGuessCorrect = l.makeGuess('p');
-console.log(`The guess was correct ${isGuessCorrect}`)
+// console.log("I'm going to make a guess that this letter is 'p'.")
+// let isGuessCorrect = l.makeGuess('p');
+// console.log(`The guess was correct ${isGuessCorrect}`)
 
-console.log("I'm going to make a guess that this letter is 'l'.")
-isGuessCorrect = l.makeGuess('l');
-console.log(`The guess was correct ${isGuessCorrect}`)
+// console.log("I'm going to make a guess that this letter is 'l'.")
+// isGuessCorrect = l.makeGuess('l');
+// console.log(`The guess was correct ${isGuessCorrect}`)
 
-console.log(l.guessed)
-console.log(`Our new letter is ${l}`)
+// console.log(l.guessed)
+// console.log(`Our new letter is ${l}`)
 
 module.exports = Letter;
 
