@@ -17,22 +17,31 @@
     //and checks it against the underlying character
     //updating the stored boolean value to true if it was guessed correctly
 
-
+function isLetter(char) {
+    if (char.length > 1) {
+        return false;
+    }
+    var regex = /[A-Za-z]/;
+    //character.search returns -1 if not found
+    return char.search(regex) > -1;
+}
 
 class Letter {
     constructor(char){
         this.char = char;
         this.guessed = false;
+        this.alpha = isLetter(char);
     }
     toString() {
         // boolean_expression ? true_return_value : false_return_value
         // return this.guessed ? this.char : "_";
-        if (this.guessed) {
+        if (this.guessed || !this.alpha) {
             return this.char;
         } else {
-            return "_";
+            return "_ ";
         }
     }
+    
     makeGuess(guess){
         if (guess == this.char) {
             this.guessed = true;
