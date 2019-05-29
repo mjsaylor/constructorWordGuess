@@ -24,7 +24,7 @@ class Letter {
         this.char = char;
         this.guessed = false;
     }
-    toString(){
+    toString() {
         // boolean_expression ? true_return_value : false_return_value
         // return this.guessed ? this.char : "_";
         if (this.guessed) {
@@ -58,6 +58,7 @@ console.log(`The guess was correct ${isGuessCorrect}`)
 console.log(l.guessed)
 console.log(`Our new letter is ${l}`)
 
+module.exports = Letter;
 
 
 
