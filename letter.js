@@ -29,21 +29,20 @@ function isLetter(char) {
 class Letter {
     constructor(char){
         this.char = char;
-        this.guessed = false;
-        this.alpha = isLetter(char);
+        this.guessed = !isLetter(char);
     }
     toString() {
         // boolean_expression ? true_return_value : false_return_value
         // return this.guessed ? this.char : "_";
-        if (this.guessed || !this.alpha) {
-            return this.char;
+        if (this.guessed) {
+            return this.char + ' ';
         } else {
             return "_ ";
         }
     }
     
-    makeGuess(guess){
-        if (guess == this.char) {
+    makeGuess(guess) {
+        if (guess.toLowerCase() == this.char.toLowerCase()) {
             this.guessed = true;
             return true
         } else {

@@ -9,6 +9,7 @@ class Word {
     constructor(word) {
         //An array of new Letter objects representing the letters of the underlying word
         this.letters = word.split("").map(letter => new Letter(letter));
+        this.guessed = false;
     }
     //function that returns a string representing the word
     toString() {
@@ -26,6 +27,7 @@ class Word {
             if (letterGuess)
                 isGuessCorrect = true;
         });
+        this.guessed = this.letters.every(letter => letter.guessed)
         return isGuessCorrect;
     }
     
